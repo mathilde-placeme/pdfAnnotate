@@ -12,6 +12,7 @@
   "files": [
     "lib/**/*",
     "_bundles/**/*",
+    "src/**/*",
     "examples/**/*"
   ],
   "keywords": [
