@@ -65,8 +65,7 @@ export class TextAnnotationObj
   }
 
   public createDefaultAppearanceStream() {
-    throw Error("error custom");
-    /* this.appearanceStream = new AppStream(this);
+    this.appearanceStream = new AppStream(this);
     this.appearanceStream.new_object = true;
     let xobj = new XObjectObj();
     xobj.object_id = this.factory.parser.getFreeObjectId();
@@ -126,18 +125,14 @@ export class TextAnnotationObj
         );
         break;
       default:
-        console.log("on draw");
-        throw Error(
-          "Not yet implemented. Pls. create ticket on Github with feature request."
-        );
-      //go.drawPolygon([10, 10, 10]).drawLine(80, 90, 90, 80);
+        go.drawPolygon([10, 10, 10]).drawLine(80, 90, 90, 80);
     }
     this.appearanceStream.N = xobj;
     this.additional_objects_to_write.push({
       obj: xobj,
       func: (ob: any, cryptoInterface: CryptoInterface) =>
         ob.writeXObject(cryptoInterface),
-    }); */
+    });
   }
 
   convertAnnotationIcon(icon: AnnotationIcon): number[] {
