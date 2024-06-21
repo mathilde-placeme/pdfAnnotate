@@ -70,7 +70,7 @@ export class TextAnnotationObj
     let xobj = new XObjectObj();
     xobj.object_id = this.factory.parser.getFreeObjectId();
     xobj.new_object = true;
-    xobj.bBox = [0, 0, 100, 100];
+    xobj.bBox = [0, 0, 1000, 1000];
     xobj.matrix = [1, 0, 0, 1, 0, 0];
     let cs = new ContentStream();
     xobj.contentStream = cs;
@@ -123,7 +123,7 @@ export class TextAnnotationObj
       default:
         go.setLineColor({ r: 0, g: 0, b: 0 })
           .setFillColor(this.color)
-          .drawFillPolygon([0, 0, 50, 100, 100, 0, 0, 0], 2);
+          .drawFillPolygon([0, 0, 500, 1000, 1000, 0, 0, 0], 2);
       /* .drawLine(0, 0, 200, 200)
           .drawLine(200, 200, 400, 0)
           .drawLine(400, 0, 0, 0); */
