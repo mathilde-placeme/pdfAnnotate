@@ -93,7 +93,7 @@ export class TextAnnotationObj
       xobj.resources = res;
     }
 
-    go.drawRect(0, 0, 100, 100, 25);
+    go.drawRect(0, 0, 200, 200, 25);
 
     switch (this.icon) {
       case AnnotationIcon.Help:
