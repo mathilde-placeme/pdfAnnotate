@@ -121,12 +121,12 @@ export class TextAnnotationObj
         );
         break;
       default:
-        go.setLineColor({ r: 1, g: 1, b: 1 })
+        go.setLineColor({ r: 0, g: 0, b: 0 })
           .setFillColor(this.color)
-          .drawFillPolygon([0, 0, 200, 200, 400, 0])
-          .drawLine(0, 0, 200, 200)
+          .drawFillPolygon([0, 0, 200, 200, 400, 0], 2);
+      /* .drawLine(0, 0, 200, 200)
           .drawLine(200, 200, 400, 0)
-          .drawLine(400, 0, 0, 0);
+          .drawLine(400, 0, 0, 0); */
     }
     this.appearanceStream.N = xobj;
     this.additional_objects_to_write.push({
