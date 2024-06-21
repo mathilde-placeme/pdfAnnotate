@@ -15,6 +15,9 @@
     "src/**/*",
     "examples/**/*"
   ],
+  "bin": {
+    "pdfAnnotate": "_bundles/pdfAnnotate.js"
+  },
   "keywords": [
     "pdf",
     "annotation",
