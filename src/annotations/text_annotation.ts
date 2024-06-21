@@ -93,10 +93,6 @@ export class TextAnnotationObj
       xobj.resources = res;
     }
 
-    go.setLineColor({ r: 0, g: 0, b: 0 })
-      .setFillColor(this.color)
-      .drawFillRect(0, 0, 100, 100, 25);
-
     switch (this.icon) {
       case AnnotationIcon.Help:
         go.addTextObject()
@@ -125,7 +121,7 @@ export class TextAnnotationObj
         );
         break;
       default:
-        go.drawPolygon([47, 73, 110, 115, 101, 114, 116]);
+        go.drawPolygon([100, 10, 150, 190, 50, 190]);
     }
     this.appearanceStream.N = xobj;
     this.additional_objects_to_write.push({
