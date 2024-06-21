@@ -123,7 +123,10 @@ export class TextAnnotationObj
       default:
         go.setLineColor({ r: 1, g: 1, b: 1 })
           .setFillColor(this.color)
-          .drawFillPolygon([0, 0, 200, 200, 400, 0]);
+          .drawFillPolygon([0, 0, 200, 200, 400, 0])
+          .drawLine(0, 0, 200, 200)
+          .drawLine(200, 200, 400, 0)
+          .drawLine(400, 0, 0, 0);
     }
     this.appearanceStream.N = xobj;
     this.additional_objects_to_write.push({
