@@ -93,8 +93,6 @@ export class TextAnnotationObj
       xobj.resources = res;
     }
 
-    go.drawRect(0, 0, 200, 200, 25);
-
     switch (this.icon) {
       case AnnotationIcon.Help:
         go.addTextObject()
@@ -123,18 +121,9 @@ export class TextAnnotationObj
         );
         break;
       default:
-        go.addTextObject()
-          .setColor()
-          .setFont("/F1", 120)
-          .setText("Δ", [20, 10]);
-      /* go.setLineColor({ r: 1, g: 1, b: 1 })
+        go.setLineColor({ r: 1, g: 1, b: 1 })
           .setFillColor(this.color)
-          .drawPolygon([10, 10, 10, 90, 80, 90, 80, 80, 90, 80, 90, 10, 10, 10])
-          .drawLine(80, 90, 90, 80); */
-      /* go.setLineColor({ r: 1, g: 1, b: 1 })
-          .setFillColor(this.color)
-          .drawPolygon([100, 10, 150, 190, 50, 190])
-          .drawLine(100, 10, 150, 190); */
+          .drawFillPolygon([0, 0, 100, 100, 0, 100]);
     }
     this.appearanceStream.N = xobj;
     this.additional_objects_to_write.push({
