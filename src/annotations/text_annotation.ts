@@ -125,7 +125,7 @@ export class TextAnnotationObj
         );
         break;
       default:
-        go.drawPolygon([110, 110, 60, 10, 10, 110]);
+        go.drawPolygon([100, 10, 150, 190, 50, 190]);
     }
     this.appearanceStream.N = xobj;
     this.additional_objects_to_write.push({
